@@ -6,3 +6,7 @@ import Root from './components/root';
 // testing only
 // import fetchGiphysSearch from './util/api_util';
 import { receiveGiphysSearch } from './actions/giphy_actions';
+import giphysReduder from './reducers/giphys_reducer';
+
+const store = configureStore();
+window.store = store;
