@@ -4,15 +4,11 @@ import configureStore from './store/store';
 import Root from './components/root';
 
 // testing only
-import { receiveSearchGiphys, fetchSearchGiphys } from "./actions/giphy_actions";
+// import { receiveSearchGiphys, fetchSearchGiphys } from "./actions/giphy_actions";
 
 document.addEventListener('DOMContentLoaded', () => {
   const store = configureStore();
   const root = document.getElementById('root');
-  window.store = store;
-  window.fetchSearchGiphys = fetchSearchGiphys;
-  window.receiveSearchGiphys = receiveSearchGiphys;
 
-  // window.fetchSearchGiphys = fetchSearchGiphys;
-  // ReactDOM.render(<Root store={store} />, root);
+  ReactDOM.render(<Root store={store} />, root);
 })
