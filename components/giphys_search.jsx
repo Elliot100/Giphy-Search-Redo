@@ -31,7 +31,7 @@ class GiphysSearch extends React.Component {
       <div>
         <form className='search-bar'>
           <input value={this.state.searchTerm} onChange={this.handleChange} />
-          <button onSubmit={this.handleSubmit}>search giphy</button>
+          <button type='submit' onClick={this.handleSubmit}>search giphy</button>
         </form>
         <GiphysIndex giphys={giphys} />
       </div>
