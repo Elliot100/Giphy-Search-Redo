@@ -4,9 +4,15 @@ import configureStore from './store/store';
 import Root from './components/root';
 
 // testing only
-// import fetchGiphysSearch from './util/api_util';
-import { receiveGiphysSearch } from './actions/giphy_actions';
-import giphysReduder from './reducers/giphys_reducer';
+import { receiveSearchGiphys, fetchSearchGiphys } from "./actions/giphy_actions";
 
-const store = configureStore();
-window.store = store;
+document.addEventListener('DOMContentLoaded', () => {
+  const store = configureStore();
+  const root = document.getElementById('root');
+  window.store = store;
+  window.fetchSearchGiphys = fetchSearchGiphys;
+  window.receiveSearchGiphys = receiveSearchGiphys;
+
+  // window.fetchSearchGiphys = fetchSearchGiphys;
+  // ReactDOM.render(<Root store={store} />, root);
+})

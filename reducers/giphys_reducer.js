@@ -10,4 +10,3 @@ const giphysReduder = (state = [], action) => {
 };
 
 export default giphysReduder;
-// window.giphysReduder = giphysReduder;
